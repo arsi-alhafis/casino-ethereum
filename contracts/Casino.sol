@@ -72,5 +72,13 @@ contract Casino {
                 winners[j].transfer(winnerEtherAmount);
             }
         }
+
+        resetData();
+    }
+
+    function resetData() public {
+        players.length = 0;
+        totalBet = 0;
+        numberOfBets = 0;
     }
 }
