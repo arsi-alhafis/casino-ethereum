@@ -68,9 +68,7 @@ contract Casino {
         uint256 winnerEtherAmount = totalBet / winners.length;
 
         for (uint256 j = 0; j < count; j ++) {
-            if (winners[j] != address(0)) {
-                winners[j].transfer(winnerEtherAmount);
-            }
+            winners[j].transfer(winnerEtherAmount);
         }
 
         resetData();
